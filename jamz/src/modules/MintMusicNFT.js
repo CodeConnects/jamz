@@ -46,7 +46,7 @@ const MintMusicNFT = () => {
 
   return (
     <div>
-      <h1 className='mb-6'>Music NFT Mint</h1>
+      <h2 className='mb-6 bg-cyan-600 text-white p-3'>Music NFT Mint</h2>
 
       <div className='mb-6'>
         <input 
@@ -67,7 +67,7 @@ const MintMusicNFT = () => {
   
       <button 
         onClick={mintNFT} 
-        className='bg-blue-700 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded'
+        className='bg-cyan-700 hover:bg-cyan-800 text-white font-bold py-2 px-4 rounded'
         >Mint Music NFT</button>
     </div>
   );

@@ -5,7 +5,7 @@ import MintMusicNFT from './modules/MintMusicNFT';
 function App() {
   return (
     <div className="main-app text-center">
-      <h1>Jamz Music NFT Creator</h1>
+      <h1 className='bg-cyan-900'>Jamz Music NFT Creator</h1>
       
       <div className='flex justify-around my-10'>
         <h2 className='flex'>Drum Machine <br />------------------<br />Sequencer</h2>
