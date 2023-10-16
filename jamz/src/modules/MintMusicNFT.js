@@ -1,6 +1,7 @@
 // MintMusicNFT.js
 import React, { useState } from 'react';
 import Web3 from 'web3';
+import '../styles/MintMusicNFT.css';
 
 const MintMusicNFT = () => {
   const [blockchainChoice, setBlockchainChoice] = useState('polygon');
@@ -15,8 +16,6 @@ const MintMusicNFT = () => {
   
     // Create a new NFT contract instance
     const web3 = new Web3(window.ethereum);
-    //const nftContract = new web3.eth.Contract(nftContractAbi, nftContractAddress);
-    // const nftContractAddress = process.env.REACT_APP_NFT_CONTRACT_ADDRESS;
 
     // get the ID of the current blockchain
     const chainId = await web3.eth.getChainId();
@@ -40,24 +39,36 @@ const MintMusicNFT = () => {
     console.log(`Current user wallet address: ${walletAddress}`);*/
 
     // Mint the NFT
-    //await nftContract.methods.mintNFT(walletAddress, musicFile).send();
+    // const nftContract = new web3.eth.Contract(nftContractAbi, nftContractAddress);
+    // const nftContractAddress = process.env.REACT_APP_NFT_CONTRACT_ADDRESS;
+    // await nftContract.methods.mintNFT(walletAddress, musicFile).send();
   };
 
   return (
     <div>
-      <h1>Music NFT Mint</h1>
-      <div>
-        <select value={blockchainChoice} onChange={(e) => setBlockchainChoice(e.target.value)}>
+      <h1 className='mb-6'>Music NFT Mint</h1>
+
+      <div className='mb-6'>
+        <input 
+          type="file" 
+          onChange={(e) => setMusicFile(e.target.files[0])}
+          className='bg-white py-2 rounded'
+        />
+      </div>
+
+      <div className='mb-12'>
+        <select value={blockchainChoice} onChange={(e) => setBlockchainChoice(e.target.value)} className='p-2.5'>
           <option value="polygon">Polygon</option>
           <option value="scroll">Scroll</option>
           <option value="mantle">Mantle</option>
           <option value="filecoin">Filecoin</option>
         </select>
       </div>
-      <div>
-        <input type="file" onChange={(e) => setMusicFile(e.target.files[0])} />
-      </div>
-      <button onClick={mintNFT}>Mint NFT</button>
+  
+      <button 
+        onClick={mintNFT} 
+        className='bg-blue-700 hover:bg-blue-500 text-white font-bold py-2 px-4 rounded'
+        >Mint Music NFT</button>
     </div>
   );
 };
