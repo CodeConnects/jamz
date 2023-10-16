@@ -5,9 +5,9 @@ body {
   font-family: sans-serif,helvetica;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 h1 {
-  text-align: center;
   margin: 0;
   padding: 0.6em 2em 0.4em;
   background-color: #2D4760;
