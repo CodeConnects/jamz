@@ -57,7 +57,11 @@ const MintMusicNFT = () => {
       </div>
 
       <div className='mb-12'>
-        <select value={blockchainChoice} onChange={(e) => setBlockchainChoice(e.target.value)} className='p-2.5'>
+        <select 
+          value={blockchainChoice} 
+          onChange={(e) => setBlockchainChoice(e.target.value)} 
+          className='p-2.5 border border-cyan-700'
+        >
           <option value="polygon">Polygon</option>
           <option value="scroll">Scroll</option>
           <option value="mantle">Mantle</option>
