@@ -1,6 +1,6 @@
 // MintMusicNFT.js
-import { useState } from 'react';
-import { Web3 } from 'web3';
+import React, { useState } from 'react';
+//import { Web3 } from 'web3';
 import '../styles/MintMusicNFT.css';
 
 const MintMusicNFT = () => {
@@ -11,43 +11,41 @@ const MintMusicNFT = () => {
   const mintNFT = async () => {
     setIsButtonClicked(true);
     console.log(musicFile);
-    /*
+    
     try { 
 
       // Get the user's wallet address
       const walletAddress = await window.ethereum.request({ method: 'eth_requestAccounts' });
     
       // Create a new NFT contract instance
-      const web3 = new Web3(window.ethereum);
+      //const web3 = new Web3(window.ethereum);
 
       // get the ID of the current blockchain
-      const chainId = await web3.eth.getChainId();
+      //const chainId = await web3.eth.getChainId();
 
       // get the current network gas price
-      const gasPrice = await web3.eth.getGasPrice();
+      //const gasPrice = await web3.eth.getGasPrice();
 
       // Get the current block number
-      const blockNumber = await web3.eth.getBlockNumber();
+      //const blockNumber = await web3.eth.getBlockNumber();
 
-      console.log('Current chain ID: ' + musicFile + '\n' + isButtonClicked + '\n' + blockchainChoice);
+      //console.log('Current chain ID: ' + musicFile + '\n' + isButtonClicked + '\n' + blockchainChoice);
 
       alert(
-        'Current chain ID: ' + chainId + '\n' +
-        'Current gas price: ' + gasPrice + '\n' +
-        'Current block number: ' + blockNumber + '\n' +
+        //'Current chain ID: ' + chainId + '\n' +
+        //'Current gas price: ' + gasPrice + '\n' +
+        //'Current block number: ' + blockNumber + '\n' +
         'Current user wallet address: ' + walletAddress
       );
     } catch (error) { 
-      alert('Wallet Connection Error: \n' + error);
+      alert('No Wallet Connected: \n' + error);
       setIsButtonClicked(false);
     }
 
-    console.log(`Current chain ID: ${chainId}`);
-    console.log(`Current gas price: ${gasPrice}`);
-    console.log(`Current block number: ${blockNumber}`);
-    console.log(`Current user wallet address: ${walletAddress}`);
-    
-    */
+    //console.log(`Current chain ID: ${chainId}`);
+    //console.log(`Current gas price: ${gasPrice}`);
+    //console.log(`Current block number: ${blockNumber}`);
+    //console.log(`Current user wallet address: ${walletAddress}`);
 
     // Mint the NFT
     // const nftContract = new web3.eth.Contract(nftContractAbi, nftContractAddress);
