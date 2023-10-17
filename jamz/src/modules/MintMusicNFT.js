@@ -46,13 +46,13 @@ const MintMusicNFT = () => {
 
   return (
     <div>
-      <h2 className='mb-6 bg-cyan-600 text-white p-3'>Music NFT Mint</h2>
+      <h2 className='mb-12 bg-cyan-600 text-white p-3'>Music NFT Mint</h2>
 
       <div className='mb-6'>
         <input 
           type="file" 
           onChange={(e) => setMusicFile(e.target.files[0])}
-          className='bg-white py-2 rounded'
+          className='bg-white p-2 rounded-sm border border-cyan-700'
         />
       </div>
 
@@ -60,7 +60,7 @@ const MintMusicNFT = () => {
         <select 
           value={blockchainChoice} 
           onChange={(e) => setBlockchainChoice(e.target.value)} 
-          className='p-2.5 border border-cyan-700'
+          className='p-3 border border-cyan-700'
         >
           <option value="polygon">Polygon</option>
           <option value="scroll">Scroll</option>
@@ -69,10 +69,19 @@ const MintMusicNFT = () => {
         </select>
       </div>
   
-      <button 
-        onClick={mintNFT} 
-        className='bg-cyan-700 hover:bg-cyan-800 text-white font-bold py-2 px-4 rounded'
-        >Mint Music NFT</button>
+      <div>
+        <button 
+          onClick={mintNFT} 
+          className='relative inline-block group mb-4'>
+          <span className="relative z-10 block px-5 py-3 overflow-hidden font-bold leading-tight text-white transition-colors duration-300 ease-out border-2 border-gray-900 rounded-sm group-hover:text-gray-200">
+          <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-sm bg-cyan-700"></span>
+          <span className="absolute left-0 w-56 h-52 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-cyan-800 group-hover:-rotate-180 ease"></span>
+          <span className="relative">Mint Music NFT</span>
+          </span>
+          <span className="absolute bottom-0 right-0 w-full h-12 -mb-1 -mr-1 transition-all duration-200 ease-linear bg-cyan-800 rounded-sm group-hover:mb-0 group-hover:mr-0"></span>
+        </button>
+      </div>
+
     </div>
   );
 };
