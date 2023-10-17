@@ -1,16 +1,17 @@
 // MintMusicNFT.js
-import React, { useState } from 'react';
-import Web3 from 'web3';
+import { useState } from 'react';
+//import Web3 from 'web3';
 import '../styles/MintMusicNFT.css';
 
 const MintMusicNFT = () => {
   const [blockchainChoice, setBlockchainChoice] = useState('polygon');
   const [musicFile, setMusicFile] = useState(null);
-  const [isButtonClicked, setIsButtonClicked] = useState(false);
+  //const [isButtonClicked, setIsButtonClicked] = useState(false);
 
   const mintNFT = async () => {
-    setIsButtonClicked(true);
-
+    //setIsButtonClicked(true);
+    console.log(musicFile);
+    /*
     try { 
 
       // Get the user's wallet address
@@ -41,15 +42,19 @@ const MintMusicNFT = () => {
       setIsButtonClicked(false);
     }
 
-    /*console.log(`Current chain ID: ${chainId}`);
+    console.log(`Current chain ID: ${chainId}`);
     console.log(`Current gas price: ${gasPrice}`);
     console.log(`Current block number: ${blockNumber}`);
-    console.log(`Current user wallet address: ${walletAddress}`);*/
+    console.log(`Current user wallet address: ${walletAddress}`);
+    
+    */
 
     // Mint the NFT
     // const nftContract = new web3.eth.Contract(nftContractAbi, nftContractAddress);
     // const nftContractAddress = process.env.REACT_APP_NFT_CONTRACT_ADDRESS;
     // await nftContract.methods.mintNFT(walletAddress, musicFile).send();
+
+    console.log('MintMusicNFT');
   };
 
   return (
@@ -67,7 +72,7 @@ const MintMusicNFT = () => {
       <div className='mb-12'>
         <select 
           value={blockchainChoice} 
-          onChange={(e) => setBlockchainChoice(e.target.value)} 
+          onChange={(e) => setBlockchainChoice(e.target.value)}
           className='p-3 border border-cyan-700'
         >
           <option value="polygon">Polygon</option>
