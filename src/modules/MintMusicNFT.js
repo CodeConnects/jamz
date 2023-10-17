@@ -11,27 +11,33 @@ const MintMusicNFT = () => {
   const mintNFT = async () => {
     setIsButtonClicked(true);
 
-    // Get the user's wallet address
-    const walletAddress = await window.ethereum.request({ method: 'eth_requestAccounts' });
-  
-    // Create a new NFT contract instance
-    const web3 = new Web3(window.ethereum);
+    try { 
 
-    // get the ID of the current blockchain
-    const chainId = await web3.eth.getChainId();
+      // Get the user's wallet address
+      const walletAddress = await window.ethereum.request({ method: 'eth_requestAccounts' });
+    
+      // Create a new NFT contract instance
+      const web3 = new Web3(window.ethereum);
 
-    // get the current network gas price
-    const gasPrice = await web3.eth.getGasPrice();
+      // get the ID of the current blockchain
+      const chainId = await web3.eth.getChainId();
 
-    // Get the current block number
-    const blockNumber = await web3.eth.getBlockNumber();
+      // get the current network gas price
+      const gasPrice = await web3.eth.getGasPrice();
 
-    alert(
-      'Current chain ID: ' + chainId + '\n' +
-      'Current gas price: ' + gasPrice + '\n' +
-      'Current block number: ' + blockNumber + '\n' +
-      'Current user wallet address: ' + walletAddress
-    );
+      // Get the current block number
+      const blockNumber = await web3.eth.getBlockNumber();
+
+      alert(
+        'Current chain ID: ' + chainId + '\n' +
+        'Current gas price: ' + gasPrice + '\n' +
+        'Current block number: ' + blockNumber + '\n' +
+        'Current user wallet address: ' + walletAddress
+      );
+    } catch (error) { 
+      alert('Wallet Connection Error: \n' + error);
+      setIsButtonClicked(false);
+    }
 
     /*console.log(`Current chain ID: ${chainId}`);
     console.log(`Current gas price: ${gasPrice}`);
@@ -70,9 +76,10 @@ const MintMusicNFT = () => {
       </div>
   
       <div>
-        <button 
-          onClick={mintNFT} 
-          className='relative inline-block group mb-4'>
+        <button  
+          className='relative inline-block group mb-4'
+          onClick={mintNFT}
+        >
           <span className="relative z-10 block px-5 py-3 overflow-hidden font-semibold leading-tight text-white transition-colors duration-300 ease-out border-2 border-gray-900 rounded-sm group-hover:text-gray-200">
           <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-sm bg-cyan-700"></span>
           <span className="absolute left-0 w-56 h-52 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-cyan-800 group-hover:-rotate-180 ease"></span>
