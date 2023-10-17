@@ -13,13 +13,13 @@ h1 {
   padding: 0.6em 2em 0.4em;
   background-color: #2D4760;
   color: #ffffff;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 1.75em;
   border-bottom: 2px solid #000;
 }
 h2 {
   font-size: 1.1em;
-  font-weight: bold;
+  font-weight: 600;
 }
 img {
   border: 2px solid #fff;

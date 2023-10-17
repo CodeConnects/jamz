@@ -73,7 +73,7 @@ const MintMusicNFT = () => {
         <button 
           onClick={mintNFT} 
           className='relative inline-block group mb-4'>
-          <span className="relative z-10 block px-5 py-3 overflow-hidden font-bold leading-tight text-white transition-colors duration-300 ease-out border-2 border-gray-900 rounded-sm group-hover:text-gray-200">
+          <span className="relative z-10 block px-5 py-3 overflow-hidden font-semibold leading-tight text-white transition-colors duration-300 ease-out border-2 border-gray-900 rounded-sm group-hover:text-gray-200">
           <span className="absolute inset-0 w-full h-full px-5 py-3 rounded-sm bg-cyan-700"></span>
           <span className="absolute left-0 w-56 h-52 -ml-2 transition-all duration-300 origin-top-right -rotate-90 -translate-x-full translate-y-12 bg-cyan-800 group-hover:-rotate-180 ease"></span>
           <span className="relative">Mint Music NFT</span>
