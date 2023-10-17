@@ -1,24 +1,28 @@
 // MintMusicNFT.js
 import { useState } from 'react';
-//import Web3 from 'web3';
+import Web3 from 'web3';
 import '../styles/MintMusicNFT.css';
 
 const MintMusicNFT = () => {
   const [blockchainChoice, setBlockchainChoice] = useState('polygon');
   const [musicFile, setMusicFile] = useState(null);
-  //const [isButtonClicked, setIsButtonClicked] = useState(false);
+  const [isButtonClicked, setIsButtonClicked] = useState(false);
+  console.log(musicFile, isButtonClicked);
 
   const mintNFT = async () => {
-    //setIsButtonClicked(true);
-    console.log(musicFile);
-    /*
+    setIsButtonClicked(true);
+    
     try { 
 
+      // Create a new NFT contract instance
+      const web3 = new Web3(window.ethereum);
+      console.log(web3);
+
+      /*
       // Get the user's wallet address
       const walletAddress = await window.ethereum.request({ method: 'eth_requestAccounts' });
     
-      // Create a new NFT contract instance
-      const web3 = new Web3(window.ethereum);
+      
 
       // get the ID of the current blockchain
       const chainId = await web3.eth.getChainId();
@@ -37,11 +41,12 @@ const MintMusicNFT = () => {
         'Current block number: ' + blockNumber + '\n' +
         'Current user wallet address: ' + walletAddress
       );
+      */
     } catch (error) { 
       alert('Wallet Connection Error: \n' + error);
       setIsButtonClicked(false);
     }
-
+    /*
     console.log(`Current chain ID: ${chainId}`);
     console.log(`Current gas price: ${gasPrice}`);
     console.log(`Current block number: ${blockNumber}`);
@@ -54,7 +59,7 @@ const MintMusicNFT = () => {
     // const nftContractAddress = process.env.REACT_APP_NFT_CONTRACT_ADDRESS;
     // await nftContract.methods.mintNFT(walletAddress, musicFile).send();
 
-    console.log('MintMusicNFT');
+    alert('Mint Music NFT');
   };
 
   return (
