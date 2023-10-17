@@ -51,8 +51,6 @@ const MintMusicNFT = () => {
     // const nftContract = new web3.eth.Contract(nftContractAbi, nftContractAddress);
     // const nftContractAddress = process.env.REACT_APP_NFT_CONTRACT_ADDRESS;
     // await nftContract.methods.mintNFT(walletAddress, musicFile).send();
-
-    alert('Mint Music NFT');
   };
 
   return (
