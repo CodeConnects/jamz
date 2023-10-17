@@ -1,6 +1,6 @@
 // MintMusicNFT.js
 import { useState } from 'react';
-import Web3 from 'web3';
+import { Web3 } from 'web3';
 import '../styles/MintMusicNFT.css';
 
 const MintMusicNFT = () => {
