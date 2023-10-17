@@ -2,7 +2,7 @@
 
 ## Jamz Music NFT Creator
 
-### Using Tone.js to create a music track, mint your creation as a music NFT on your choic of Scroll, Polygon, and Mantle blockchains.
+### Using Tone.js to create a music track, mint your creation as a music NFT on your choice of Scroll, Polygon, and Mantle blockchains.
 
 ## How to use
 
