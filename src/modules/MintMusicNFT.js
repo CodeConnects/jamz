@@ -28,6 +28,8 @@ const MintMusicNFT = () => {
       // Get the current block number
       const blockNumber = await web3.eth.getBlockNumber();
 
+      console.log('Current chain ID: ' + musicFile + '\n' + isButtonClicked + '\n' + blockchainChoice);
+
       alert(
         'Current chain ID: ' + chainId + '\n' +
         'Current gas price: ' + gasPrice + '\n' +
